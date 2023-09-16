@@ -749,4 +749,77 @@ def run_script():
         else:
             print("Invalid Option! Exiting...")
 
+            pass
+
+
+def run_script_url():
+    print("WELCOME TO VOD RECOVERY" + "\n")
+    menu = 0
+    while menu < 7:
+        print_main_menu()
+        menu = int(input("Please choose an option: "))
+        if menu == 7:
+            exit()
+        elif menu == 1:
+            print_vod_type_menu()
+            vod_type = int(input("Please choose an option: "))
+            if vod_type == 1:
+                print_vod_recovery_menu()
+                vod_recovery_method = int(input("Please choose an option: "))
+                if vod_recovery_method == 1:
+                    manual_vod_recover()
+                elif vod_recovery_method == 2:
+                    website_vod_recover()
+                elif vod_recovery_method == 3:
+                    exit()
+                else:
+                    print("Invalid option returning to main menu.")
+            elif vod_type == 2:
+                bulk_vod_recovery()
+            elif vod_type == 3:
+                exit()
+            else:
+                print("Invalid option! Returning to main menu.")
+        elif menu == 2:
+            print_clip_type_menu()
+            clip_type = int(input("Please choose an option: "))
+            if clip_type == 1:
+                print_clip_recovery_menu()
+                clip_recovery_method = int(input("Please choose an option: "))
+                if clip_recovery_method == 1:
+                    manual_clip_recover()
+                elif clip_recovery_method == 2:
+                    website_clip_recover()
+                elif clip_recovery_method == 3:
+                    exit()
+                else:
+                    print("Invalid option returning to main menu.")
+            elif clip_type == 2:
+                get_random_clips()
+            elif clip_type == 3:
+                bulk_clip_recovery()
+            elif clip_type == 4:
+                exit()
+            else:
+                print("Invalid option! Returning to main menu.")
+        elif menu == 3:
+            url = input("Enter M3U8 Link: ")
+            if is_vod_muted(url):
+                unmute_vod(url)
+            else:
+                print("Vod does NOT contain muted segments")
+        elif menu == 4:
+            url = input("Enter M3U8 Link: ")
+            return_segment_ratio(url)
+            remove_file(generate_vod_filename(return_username(url), return_vod_id(url)))
+        elif menu == 5:
+            url = input("Enter M3U8 Link: ")
+            return_valid_file(url)
+        elif menu == 6:
+            url = input("Enter M3U8 Link: ")
+            download_m3u8(url)
+        else:
+            print("Invalid Option! Exiting...")
+
+run_script_url()
 run_script()
