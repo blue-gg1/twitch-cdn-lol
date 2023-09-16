@@ -10,6 +10,7 @@ import sys
 from bs4 import BeautifulSoup
 from moviepy.editor import concatenate_videoclips, VideoFileClip
 from natsort import natsorted
+user_url = sys.argv[1]
 
 
 domains = ["https://vod-secure.twitch.tv/",
@@ -446,7 +447,8 @@ def manual_vod_recover():
 
 
 def website_vod_recover():
-    tracker_url = input("Enter twitchtracker/streamscharts/sullygnome url:  ")
+    tracker_url = user_url
+    # tracker_url = input("Enter twitchtracker/streamscharts/sullygnome url:  ")
     if "streamscharts" in tracker_url:
         streamer = tracker_url.split("channels/", 1)[1].split("/")[0]
         vod_id = tracker_url.split("streams/", 1)[1]
@@ -776,7 +778,6 @@ def run_script_url():
     #     else:
     #         print("Invalid Option! Exiting...")
 
-user_url = sys.argv[1]
 
 # run_script()
 
