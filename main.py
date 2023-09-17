@@ -417,21 +417,13 @@ def vod_recover(streamer, vod_id, timestamp):
             if user_input.upper() == "Y":
                 unmute_vod(vod_url)
                 print("Total Number of Segments: " + str(len(get_all_playlist_segments(vod_url))))
-                user_option = input("Would you like to check if segments are valid (Y/N): ")
-                if user_option.upper() == "Y":
-                    return_segment_ratio(vod_url)
-                else:
-                    return
+                return_segment_ratio(vod_url)
             else:
                 return
         else:
             print(vod_url + "\n" + "Vod does NOT contain muted segments")
             print("Total Number of Segments: " + str(len(get_all_playlist_segments(vod_url))))
-            user_option = input("Would you like to check if segments are valid (Y/N): ")
-            if user_option.upper() == "Y":
-                return_segment_ratio(vod_url)
-            else:
-                return
+            return_segment_ratio(vod_url)
     else:
         print(
             "No vods found using current domain list. " + "\n" + "See the following links if you would like to check the other sites: " + "\n")
@@ -758,25 +750,8 @@ def run_script():
 def run_script_url():
     website_vod_recover()
 
-    # menu = 1
-    # while menu < 7:
-    #     if menu == 7:
-    #         exit()
-    #     elif menu == 1:
-    #         print_vod_type_menu()
-    #         vod_type = int(input("Please choose an option: "))
-    #         if vod_type == 1:
-    #             print_vod_recovery_menu()
-    #             vod_recovery_method = int(input("Please choose an option: "))
-    #             if vod_recovery_method == 2:
-    #                 website_vod_recover(user_url)
-    #                 exit()
-    #             else:
-    #                 print("Invalid option returning to main menu.")
-    #         else:
-    #             print("Invalid option! Returning to main menu.")
-    #     else:
-    #         print("Invalid Option! Exiting...")
+def download_m3u8_via_ytdlp():
+    print("test")
 
 
 # run_script()
