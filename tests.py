@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 from moviepy.editor import concatenate_videoclips, VideoFileClip
 from natsort import natsorted
 import subprocess
-yt_dlp_path = '/usr/bin/ls'
+yt_dlp_path = '/usr/bin/akdfjaskdjfasdfjkkljasdf'
 # user_url = sys.argv[1]
 
 def download_m3u8_via_ytdlp(url):
