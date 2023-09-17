@@ -214,6 +214,9 @@ def get_vod_urls(streamer, vod_id, timestamp):
     for result in grequests.imap(rs, size=100):
         if result.status_code == 200:
             valid_vod_url_list.append(result.url)
+            print('\r\n')
+            print(result.url)
+            print('\r\n')
     return valid_vod_url_list
 
 
