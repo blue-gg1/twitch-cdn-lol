@@ -10,8 +10,12 @@ import sys
 from bs4 import BeautifulSoup
 from moviepy.editor import concatenate_videoclips, VideoFileClip
 from natsort import natsorted
-user_url = sys.argv[1]
+import subprocess
+# user_url = sys.argv[1]
 
-def download_m3u8_via_ytdlp():
+def download_m3u8_via_ytdlp(url):
+    print(url)
+    subprocess.run(['/usr/bin/yt-dlp', url])
     print("test")
-    # /usr/bin/yt-dlp
+
+download_m3u8_via_ytdlp('https://dgeft87wbj63p.cloudfront.net/7a87a653eedf41c2a0c5_trashfuturepodcast_39959329333_1694721629/chunked/index-dvr.m3u8')
