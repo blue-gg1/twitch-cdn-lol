@@ -214,8 +214,10 @@ def get_vod_urls(streamer, vod_id, timestamp):
     for result in grequests.imap(rs, size=100):
         if result.status_code == 200:
             valid_vod_url_list.append(result.url)
+            global m3u8_url_lol
+            m3u8_url_lol = result.url
             print('\r\n')
-            print(result.url)
+            print(m3u8_url_lol)
             print('\r\n')
     return valid_vod_url_list
 
@@ -761,3 +763,4 @@ def download_m3u8_via_ytdlp():
 
 print(user_url)
 run_script_url()
+print(m3u8_url_lol)
