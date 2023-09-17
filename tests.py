@@ -16,7 +16,7 @@ yt_dlp_path = '/usr/bin/ls'
 
 def download_m3u8_via_ytdlp(url):
     if os.path.isfile(yt_dlp_path) is True:
-        subprocess.run(['/usr/bin/yt-dlp', url])
+        subprocess.run([yt_dlp_path, url])
     else:
         print("No yt-dlp. get yt-dlp or change the path")
     pass
