@@ -218,6 +218,9 @@ def get_vod_urls(streamer, vod_id, timestamp):
             m3u8_url_lol = result.url
             print('\r\n')
             print(m3u8_url_lol)
+            m3u8_url_lol_file = open("m3u8_url.link","a")
+            m3u8_url_lol_file.write(m3u8_url_lol)
+            m3u8_url_lol_file.close
             print('\r\n')
     return valid_vod_url_list
 
