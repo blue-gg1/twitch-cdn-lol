@@ -8,7 +8,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 secrets.py
-secrets.*
 
 # C extensions
 *.so
