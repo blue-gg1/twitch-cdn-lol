@@ -18,11 +18,3 @@ twitch_channel_list = [
 
 ### define RSS data
 rss_feed_gen = 'https://twitchrss.appspot.com/vod/'
-
-### define yt items
-## yt RSS
-rss_feed_gen_yt = 'https://www.youtube.com/feeds/videos.xml?channel_id='
-yt_channel_list = {
-    'vlogbrothers' : 'UCGaVdbSav8xWuFWTadK6loA',
-    'thephilosophytube' : 'UC2PA-AKmVpU6NKCGtZq_rKQ'
-}
