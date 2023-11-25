@@ -1,3 +1,6 @@
 [submodule "yt-dlp"]
 	path = yt-dlp
 	url = git@github.com:yt-dlp/yt-dlp.git
+[submodule "twitchcm"]
+	path = twitchcm
+	url = git@github.com:blue-gg1/twitchcm.git
