@@ -8,7 +8,7 @@ import grequests
 import requests
 import sys
 from bs4 import BeautifulSoup
-from moviepy.editor import concatenate_videoclips, VideoFileClip
+# from moviepy.editor import concatenate_videoclips, VideoFileClip
 from natsort import natsorted
 user_url = sys.argv[1]
 
